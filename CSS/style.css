@@ -23,3 +23,12 @@ header {
 .forms {
   height: 30px;
 }
+nav {
+  background-color: #0d1c51;
+  width: 100%;
+  height: 5%;
+}
+nav,
+a {
+  text-align: center;
+}
