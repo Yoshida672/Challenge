@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.karma-regular {
+  font-family: "Karma", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  background-image: linear-gradient(#010339, #0009dc);
+  color: #fff4e2;
+}
+#logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+.forms {
+  height: 30px;
+}
