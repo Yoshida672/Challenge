@@ -5,17 +5,39 @@
   box-sizing: content-box;
 }
 
+html,
 body {
   width: 100vw;
   height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden; /* Evita o estouro horizontal */
+  overflow-y: auto;
 }
-
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
 header {
-  position: fixed;
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+header {
   background-image: linear-gradient(#010339, #0009dc);
-  width: 100vw;
+  background-size: 100%;
   color: #fff4e2;
-  height: 120px;
+  height: 105px;
 }
 #logo {
   width: 100px;
@@ -26,11 +48,9 @@ header {
   height: 30px;
 }
 nav {
-  position: relative;
-  top: 20px;
   background-color: #0d1c51;
   width: 100%;
-  height: 30%;
+  height: 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -77,16 +97,16 @@ nav a {
 }
 .column {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.conteiner {
+.container {
   display: flex;
   height: 100%;
   min-height: 100%;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
 }
 #btnBusca {
   width: 35px;
@@ -110,13 +130,12 @@ nav a {
   width: 60%;
 }
 .column2:nth-child(1) {
-  order: 1; /* Vem primeiro */
+  order: 1;
 }
 
 .column2:nth-child(2) {
-  order: 2; /* Vem depois */
+  order: 2;
 }
-
 footer {
   display: flex;
   background-color: #333;
@@ -125,70 +144,12 @@ footer {
   height: 50px;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  bottom: 0; /* Ancore o rodapé ao fundo da janela de visualização */
 }
 
-main {
+header h1,
+footer p {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  width: 100%;
-  padding-top: 120px; /* Ajuste conforme a altura do cabeçalho */
-  padding-bottom: 80px; /* Ajuste conforme a altura do rodapé */
-}
-.section1 {
-  display: flex;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.content1,
-.content2,
-.content3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh; /* Use 100vh para ocupar toda a altura da janela de visualização */
-  background-color: #fff; /* Defina uma cor de fundo para cada seção conforme necessário */
   text-align: center;
-}
-
-.image {
-  margin-top: 20px;
-  z-index: 1; /* Adicione margem superior conforme necessário */
-}
-.text {
-  display: flex;
-  background-color: #0d1c51;
-  width: 100%;
-  height: 100px;
-  z-index: 0;
-}
-.social-media {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adicione margem superior conforme necessário */
-}
-
-.social-media img {
-  width: 40px;
-  height: 40px;
-  margin: 0 5px;
-}
-p {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
+  justify-content: center;
 }
