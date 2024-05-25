@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    "titulo"
+    "box";
+  border: 1px solid black;
+}
+.titulo {
+  margin-top: 30px;
+  grid-area: titulo;
+  color: #1f2f83;
+  font-size: 2rem;
+}
+.divBox {
+  grid-area: box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+.texto {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 30px;
+  width: 50%;
+  height: 300px;
+}
+strong {
+  font-weight: bold;
+}
+.diagnostico {
+  padding: 10px;
+}

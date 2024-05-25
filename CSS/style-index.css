@@ -79,3 +79,39 @@ main section div a {
   width: 40vw;
   height: 90%;
 }
+@media (min-width: 650px) and (max-width: 800px) {
+  main section div p {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+  }
+  main section div a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+    text-align: center;
+    background-color: #002d37;
+    color: #7adfff;
+    border-radius: 15px;
+    border: 1px solid black;
+  }
+}
+@media (min-width: 200px) and (max-width: 650px) {
+  main section div p {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+  }
+  main section div a {
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    text-align: center;
+    background-color: #002d37;
+    color: #7adfff;
+    border-radius: 15px;
+    border: 1px solid black;
+  }
+}
